@@ -1,0 +1,39 @@
+name: CI
+
+on:
+     push:
+          branches:
+               - main
+     pull_request:
+          branches:
+               - main
+
+jobs:
+     lint-and-test:
+          runs-on: ubuntu-latest
+
+          steps:
+               - name: Checkout code
+                 uses: actions/checkout@v4
+
+               - name: Set up Node.js
+                 uses: actions/setup-node@v4
+                 with:
+                      node-version: "20"
+
+               - name: Install dependencies
+                 run: npm install
+
+               - name: Run ESLint
+                 run: npm run lint
+
+               - name: Run TypeScript checks
+                 run: npm run typecheck
+
+               - name: Set environment variables
+                 env:
+                      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+                      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+                      RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+                      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+                 run: echo "Environment variables set."
