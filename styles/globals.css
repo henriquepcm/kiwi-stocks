@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+     --kiwi-color-1: #000000;
+     --kiwi-color-2: #111111;
+     --kiwi-color-3: #181818;
+     --kiwi-color-4: #292929;
+     --kiwi-color-5: #5c5c5c;
+     --kiwi-color-6: #888888;
+     --kiwi-color-7: #bfbfbf;
+     --kiwi-color-8: #ffffff;
+     --kiwi-color-9: #22c580;
+     --kiwi-color-10: #1da46c;
+     --kiwi-color-11: #2d477b;
+     --kiwi-color-12: #ff0000;
+}
+
+@media (prefers-color-scheme: dark) {
+     :root {
+          --kiwi-color-1: #000000;
+          --kiwi-color-8: #ffffff;
+     }
+}
+
+html,
+body {
+     overflow: hidden;
+}
+
+body {
+     @apply bg-kiwicolor1 text-kiwicolor7 text-[1.1rem] font-light;
+}
+
+@layer utilities {
+     .text-balance {
+          text-wrap: balance;
+     }
+}
+
+h1 {
+     @apply text-[1.2rem] font-light;
+}
+
+h2 {
+     @apply text-[1.4rem] font-normal;
+}
+
+h3 {
+     @apply text-[1.3rem] font-normal leading-6 mb-2;
+}
+
+.henry-footer-link {
+     overflow: hidden;
+     position: relative;
+     display: inline-block;
+     transform: translateY(0.1rem);
+}
+.henry-footer-link::before,
+.henry-footer-link::after {
+     content: "";
+     position: absolute;
+     width: 100%;
+     left: 0;
+}
+.henry-footer-link::before {
+     background-color: var(--kiwi-color-9);
+     height: 2px;
+     bottom: 0;
+     transform-origin: 0;
+     transform: scaleX(0);
+     transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.henry-footer-link:hover::before {
+     transform: scaleX(1);
+}
+.henry-footer-link::after {
+     content: attr(data-replace);
+     transform: translate3d(0, 200%, 0);
+     transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.henry-footer-link:hover::after {
+     transform: translate3d(0, 0, 0);
+     color: var(--kiwi-color-9);
+}
+.henry-footer-link span {
+     transform: translateY(4px);
+     display: inline-block;
+     transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.henry-footer-link:hover span {
+     transform: translate3d(-200%, 0, 0);
+}
