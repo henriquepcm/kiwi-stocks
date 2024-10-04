@@ -1,7 +1,7 @@
 import { UpdateSupabaseViaApi } from "@/scripts/updateSupabaseViaApi";
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST() {
      try {
           await UpdateSupabaseViaApi();
           return NextResponse.json(
