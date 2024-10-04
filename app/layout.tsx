@@ -5,6 +5,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import { Roboto_Condensed } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
      title: "Kiwi Stocks",
@@ -23,7 +24,10 @@ export default function RootLayout({
 }>) {
      return (
           <html lang="en">
-               <body className={`${roboto.className} flex`}>{children}</body>
+               <body className={`${roboto.className} flex`}>
+                    {children}
+                    <SpeedInsights />
+               </body>
           </html>
      );
 }
