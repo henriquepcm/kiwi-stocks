@@ -72,7 +72,7 @@ const symbols: string[] = [
      "WIZC3.SA",
 ];
 
-async function UpdateSupabaseViaApi(): Promise<void> {
+export async function UpdateSupabaseViaApi(): Promise<void> {
      const results: StocksApiResponse[] = [];
 
      // The API allows 5 requests per second only
@@ -233,5 +233,3 @@ async function UpdateSupabaseViaApi(): Promise<void> {
           console.error("Error inserting data into Supabase:", error);
      }
 }
-
-UpdateSupabaseViaApi();

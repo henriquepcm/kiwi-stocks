@@ -11,8 +11,6 @@ import { AppDispatch, RootState } from "@/lib/store/store";
 import { useSupabaseDataProps } from "@/hooks/useSupabaseData";
 
 export default function IndicatorsAndStocksTable() {
-     console.log("IndicatorsAndStocksTable: I rendered!");
-
      const stocks: StocksState = useSelector(
           (state: RootState) => state.stocks
      );
