@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { UpdateSupabaseViaApi } from "../../scripts/updateSupabaseViaApi"; // Adjust the path if necessary
+import { UpdateSupabaseViaApi } from "../../scripts/updateSupabaseViaApi";
 
 export default async function handler(
      req: NextApiRequest,
