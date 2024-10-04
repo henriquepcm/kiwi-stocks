@@ -14,14 +14,18 @@ export default function Footer() {
      return (
           <div className="flex flex-col gap-4 text-sm mt-auto pt-10 tracking-wider">
                <p>
-                    Data last updated on&nbsp;
-                    <span className="font-medium">
-                         {finalLasTUpdatedTimeStamp}
-                    </span>
-                    . The data provided by this app may contain errors. Please
-                    do not base any important decisions solely on this
-                    information. Always verify details and seek professional
-                    advice.
+                    {finalLasTUpdatedTimeStamp && (
+                         <span>
+                              Data last updated on&nbsp;
+                              <span className="font-medium">
+                                   {finalLasTUpdatedTimeStamp}
+                              </span>
+                              .
+                         </span>
+                    )}
+                    The data provided by this app may contain errors. Please do
+                    not base any important decisions solely on this information.
+                    Always verify details and seek professional advice.
                </p>
                <p>
                     Kiwi Compare Stocks by&nbsp;

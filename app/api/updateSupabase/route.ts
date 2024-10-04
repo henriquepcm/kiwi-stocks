@@ -1,6 +1,8 @@
 import { UpdateSupabaseViaApi } from "@/scripts/updateSupabaseViaApi";
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic"; // to prevent rendering at build time.
+
 export async function GET() {
      try {
           await UpdateSupabaseViaApi();
