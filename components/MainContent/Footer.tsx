@@ -1,10 +1,27 @@
+import { RootState } from "@/lib/store/store";
+import { formatTimestamp } from "@/utils/formatTimestamp";
+
+import { useSelector } from "react-redux";
+
 export default function Footer() {
+     const rawLastUpdatedTimestamp = useSelector((state: RootState) => {
+          return state.stocks.length > 0 ? state.stocks[0].created_at : null;
+     });
+
+     const finalLasTUpdatedTimeStamp =
+          rawLastUpdatedTimestamp && formatTimestamp(rawLastUpdatedTimestamp);
+
      return (
           <div className="flex flex-col gap-4 text-sm mt-auto pt-10 tracking-wider">
                <p>
-                    The data provided by this app may contain errors. Please do
-                    not base any important decisions solely on this information.
-                    Always verify details and seek professional advice.
+                    Data last updated on&nbsp;
+                    <span className="font-medium">
+                         {finalLasTUpdatedTimeStamp}
+                    </span>
+                    . The data provided by this app may contain errors. Please
+                    do not base any important decisions solely on this
+                    information. Always verify details and seek professional
+                    advice.
                </p>
                <p>
                     Kiwi Compare Stocks by&nbsp;
