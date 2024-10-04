@@ -1,0 +1,12 @@
+{
+     "crons": [
+          {
+               "path": "/scripts/updateSupabaseViaApi.ts",
+               "schedule": "30 10 * * 1"
+          },
+          {
+               "path": "/scripts/updateSupabaseViaApi.ts",
+               "schedule": "30 13 * * 3"
+          }
+     ]
+}
