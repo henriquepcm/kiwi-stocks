@@ -1,7 +1,7 @@
 import { UpdateSupabaseViaApi } from "@/scripts/updateSupabaseViaApi";
 import { NextResponse } from "next/server";
 
-export const maxDuration = 15; // 15 seconds
+export const maxDuration = 60; // 60 seconds
 export const dynamic = "force-dynamic";
 
 export async function GET() {
