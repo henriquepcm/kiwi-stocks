@@ -18,14 +18,19 @@ jest.mock("@supabase/supabase-js", () => ({
 
 // mock fetch API
 global.fetch = jest.fn(() =>
-     Promise.resolve({
-          ok: true,
-          json: () =>
-               Promise.resolve({
+     Promise.resolve(
+          new Response(
+               JSON.stringify({
                     symbol: "PETR4.SA",
                     price: { regularMarketPrice: { raw: 100 } },
                }),
-     })
+               {
+                    status: 200,
+                    statusText: "OK",
+                    headers: { "Content-Type": "application/json" },
+               }
+          )
+     )
 );
 
 describe("App", () => {
