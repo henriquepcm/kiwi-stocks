@@ -1,3 +1,4 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { toggleModal } from "@/lib/store/modalsAndMenuSlice/modalsAndMenuSlice";
 import { useDispatch } from "react-redux";

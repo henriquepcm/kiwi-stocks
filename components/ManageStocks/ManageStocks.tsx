@@ -1,3 +1,4 @@
+import React from "react";
 import FormInput from "@/components/ManageStocks/FormInput";
 import ModalLayout from "../Modals/ModalLayout";
 import StockCardItemList from "./StockCardItemList";

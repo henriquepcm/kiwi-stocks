@@ -1,3 +1,4 @@
+import React from "react";
 import { useSupabaseData } from "@/hooks/useSupabaseData";
 import { setIndicatorVisibility } from "@/lib/store/indicatorsSlice/indicatorsSlice";
 import { addStock } from "@/lib/store/stocksSlice/stocksSlice";
@@ -63,6 +64,7 @@ export default function FormInput() {
                               Symbol
                          </label>
                          <input
+                              aria-label="Stock Symbol"
                               type="text"
                               value={input}
                               maxLength={8}

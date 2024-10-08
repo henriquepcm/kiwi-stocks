@@ -1,6 +1,6 @@
+import React from "react";
 import { RootState } from "@/lib/store/store";
 import { formatTimestamp } from "@/utils/formatTimestamp";
-
 import { useSelector } from "react-redux";
 
 export default function Footer() {

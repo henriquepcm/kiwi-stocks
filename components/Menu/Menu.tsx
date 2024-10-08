@@ -1,5 +1,6 @@
-import { useSelector } from "react-redux";
+import React from "react";
 import MenuItem from "./MenuItem";
+import { useSelector } from "react-redux";
 import { faChartLine, faList, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { forwardRef, ForwardedRef } from "react";
 import { RootState } from "@/lib/store/store";

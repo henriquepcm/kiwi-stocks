@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { RootState } from "@/lib/store/store";
 import ManageIndicators from "../ManageIndicators/ManageIndicators";
 import ManageStocks from "../ManageStocks/ManageStocks";

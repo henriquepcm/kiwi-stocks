@@ -1,6 +1,8 @@
 "use client";
 
+import React from "react";
 import Menu from "../Menu/Menu";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,7 +10,6 @@ import { toggleMenu } from "@/lib/store/modalsAndMenuSlice/modalsAndMenuSlice";
 import { AppDispatch, RootState } from "@/lib/store/store";
 import { useRef } from "react";
 import { useOutsideClick } from "@/hooks/useOutsideClick";
-import Image from "next/image";
 
 export default function Header() {
      const dispatch: AppDispatch = useDispatch();
@@ -35,7 +36,8 @@ export default function Header() {
                     <div className="ml-5 mt-[0.6rem]">
                          <h1>Compare Stocks</h1>
                     </div>
-                    <div
+                    <button
+                         aria-label="Open menu"
                          className="ml-auto transition duration-300 text-kiwicolor8 hover:text-kiwicolor9 hover:cursor-pointer absolute top-7 right-5"
                          onClick={() => dispatch(toggleMenu())}
                     >
@@ -44,7 +46,7 @@ export default function Header() {
                               icon={faEllipsisVertical}
                               size="lg"
                          />
-                    </div>
+                    </button>
                </div>
           </>
      );

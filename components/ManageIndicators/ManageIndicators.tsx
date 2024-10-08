@@ -1,3 +1,4 @@
+import React from "react";
 import DividendsIndicatorsCheckboxList from "@/components/ManageIndicators/CheckboxLists/DividendsIndicatorsCheckboxList";
 import FinancialIndicatorsCheckboxList from "@/components/ManageIndicators/CheckboxLists/FinancialIndicatorsCheckboxList";
 import GeneralIndicatorsCheckboxList from "@/components/ManageIndicators/CheckboxLists/GeneralIndicatorsCheckboxList";
