@@ -72,7 +72,7 @@ export default function FormInput() {
                               className="w-full h-[5rem] bg-kiwicolor1 text-kiwicolor7 border-[0.1rem] border-kiwicolor3 pl-4 pt-4 uppercase font-medium transition duration-300 focus:outline-none focus:bg-kiwicolor2"
                          ></input>
                          <div className="text-sm mt-5 tracking-wider">
-                              Currently, only companies listed on the Brazilian
+                              Currently, only Brazilian companies listed on B3's
                               IDIV stock index are available.
                          </div>
                     </div>

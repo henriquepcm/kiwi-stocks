@@ -20,7 +20,7 @@ export default function Footer() {
                               <span className="font-medium">
                                    {finalLasTUpdatedTimeStamp}
                               </span>
-                              .
+                              .&nbsp;
                          </span>
                     )}
                     The data provided by this app may contain errors. Please do
