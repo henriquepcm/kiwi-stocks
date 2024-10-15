@@ -10,7 +10,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
 
 export const metadata: Metadata = {
      title: "Kiwi Stocks",
-     description: "Kiwi is a web app to track and compare shares.",
+     description: "Kiwi is a web app to track and compare stocks.",
 };
 
 const roboto = Roboto_Condensed({
