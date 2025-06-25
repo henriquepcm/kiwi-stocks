@@ -85,6 +85,16 @@ export async function UpdateSupabaseViaApi(): Promise<void> {
           }
      }
 
+     //Delete all info from the table before adding current data
+     const { error: deleteError } = await supabase
+          .from("stocks_data")
+          .delete()
+          .neq("symbol", "");
+
+     if (deleteError) {
+          console.error("Error deleting data from Supabase:", deleteError);
+     }
+
      // Insert the results into the Supabase table
      const { error } = await supabase.from("stocks_data").upsert(
           results.map(
