@@ -1,6 +1,6 @@
 {
      "compilerOptions": {
-          "target": "es5",
+          "target": "ES2020",
           "lib": ["dom", "dom.iterable", "esnext"],
           "allowJs": true,
           "skipLibCheck": true,
@@ -28,7 +28,8 @@
           "**/*.ts",
           "**/*.tsx",
           ".next/types/**/*.ts",
-          "app/actions.xx"
+          "app/actions.xx",
+          "scripts/updateSupabase.mjs"
      ],
      "exclude": ["node_modules"]
 }
