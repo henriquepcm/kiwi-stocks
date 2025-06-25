@@ -4,15 +4,10 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 interface StockCardProps {
      symbol: string;
-     sector?: string;
      onClick: () => void;
 }
 
-export default function StockCardItem({
-     symbol,
-     sector,
-     onClick,
-}: StockCardProps) {
+export default function StockCardItem({ symbol, onClick }: StockCardProps) {
      return (
           <li className="flex flex-col h-24 bg-kiwicolor2 pl-6 pt-2 pb-3 transition duration-300 group hover:cursor-default hover:bg-kiwicolor1 border-[0.1rem] border-kiwicolor1 hover:border-kiwicolor3">
                <div className="flex justify-end pr-3">
@@ -24,9 +19,6 @@ export default function StockCardItem({
                </div>
                <span className="uppercase font-medium text-kiwicolor8 transition duration-300 group-hover:translate-x-2">
                     {symbol}
-               </span>
-               <span className="text-kiwicolor6 text-sm transition duration-300 group-hover:translate-x-3">
-                    {sector}
                </span>
           </li>
      );

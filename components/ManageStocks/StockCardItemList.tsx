@@ -27,7 +27,6 @@ export default function StockCardItemList() {
                     <StockCardItem
                          key={index}
                          symbol={stock.symbol}
-                         sector={stock.sector}
                          onClick={() => handleDeleteStock(stock.symbol)}
                     />
                ))}
